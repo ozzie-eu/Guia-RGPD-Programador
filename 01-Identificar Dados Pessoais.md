@@ -1,4 +1,4 @@
-# Sheet n°1: Identify personal data
+# Sheet n°1: Identificar dados pessoais
 
 #### Understanding the notions of "personal data", "purpose" and "processing" is essential to ensure that software complies with the law when it processes user data. In particular, be careful not to confuse "anonymisation" and "pseudonymization", which have very precise and different definitions in the GDPR.
 
