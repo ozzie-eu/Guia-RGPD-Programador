@@ -29,37 +29,37 @@ As boas práticas neste guia **não pretendem cobrir a totalidade dos requisitos
 
 0. [Desenvolver em conformidade com o RGPD](00-Desenvolver-em-conformidade-com-o-RGPD.md)
 
-1. [Identificar dados pessoais](#)
+1. [Identificar dados pessoais](01-Identificar-Dados-Pessoais.md)
 
-2. [Preparar o desenvolvimento](#)
+2. [Preparar o desenvolvimento](02-Preparar-o-desenvolvimento.md)
 
-3. [Segurança do ambiente de desenvolvimento](#)
+3. [Segurança do ambiente de desenvolvimento](03-Seguranca-do-ambiente-de-desenvolvimento.md)
 
-4. [Gestão do código-fonte](#)
+4. [Gestão do código-fonte](04-Gestao-do-codigo-fonte.md)
 
-5. [Escolha informada da arquitetura](#)
+5. [Escolha informada da arquitetura](05-Escolha-informada-da-arquitetura.md)
 
-6. [Aplicar segurança nos websites, aplicações e servidores](#)
+6. [Aplicar segurança nos websites, aplicações e servidores](06-Aplicar-seguranca-nos-websites-aplicacoes-e-servidores.md)
 
-7. [Minimização da recolha de dados](#)
+7. [Minimização da recolha de dados](07-Minimizacao-da-recolha-de-dados.md)
 
-8. [Gestão de perfis de utilizadores](#)
+8. [Gestão de perfis de utilizadores](08-Gestao-de-perfis-de-utilizadores.md)
 
-9. [Controlar bibliotecas e SDKs](#)
+9. [Controlar bibliotecas e SDKs](09-Controlar-bibliotecas-e-SDKs.md)
 
-10. [Assegurar a qualidade do código e a sua documentação](#)
+10. [Assegurar a qualidade do código e a sua documentação](10-Assegurar-a-qualidade-do-codigo-e-a-sua-documentacao.md)
 
-11. [Testes à aplicação](#)
+11. [Testes à aplicação](11-Testes-as-aplicacoes.md)
 
-12. [Informar os utilizadores](#)
+12. [Informar os utilizadores](12-Informar-os-utilizadores.md)
 
-13. [Preparar o exercício de direitos pelas pessoas](#)
+13. [Preparar o exercício de direitos pelas pessoas](13-Preparar-o-exercicio-de-direitos-pelas-pessoas.md)
 
-14. [Definir um período de retenção de dados](#)
+14. [Definir um período de retenção de dados](14-Definir-um-período-de-retencao-de-dados.md)
 
-15. [Considerar a base de licitude na implementação técnica](#)
+15. [Considerar a base de licitude na implementação técnica](15-Considerar-a-base-de-licitude-na-implementacao-tecnica.md)
 
-16. [Uso de mecanismos analíticos nos websites e aplicações](#)
+16. [Uso de mecanismos analíticos nos websites e aplicações](16-Uso-de-mecanismos-analiticos-nos-websites-e-aplicacoes.md)
 
 
 
