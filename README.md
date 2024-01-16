@@ -1,99 +1,99 @@
 <p align="center"><img src="https://github.com/LINCnil/GDPR-Developer-Guide/raw/master/templates/BANNIERE-EN.JPG" width="100%" align="middle"></p>
 
 
-# GDPR Developer Guide
+# Guia RGPD do Programador
 
-#### In order to assist web and application developers in making their work GDPR-compliant, the CNIL has drawn up a new guide to best practices under an open source license, which is intended to be enriched by professionals.
+#### Para orientar programadores web e de aplicações por formar a desenvolver o seu trabalho em conformidade com o RGPD, a CNIL um novo guia de boas práticas, com licença de código-aberto, que se pretenda que seja enriquecido por profissionais.
 
-This guide is published under [license GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) and under [open license 2.0](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf) (explicitly compatible with [CC-BY 4.0 FR](https://creativecommons.org/licenses/by/4.0/deed.fr)). You can freely contribute to its redaction.
+Este guia é publicado sob a [licença GPLv3](https://www.gnu.org/licenses/gpl-3.0.html) e [open license 2.0](https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf) (explícitamente compatível com [CC-BY 4.0 FR](https://creativecommons.org/licenses/by/4.0/deed.fr)). Pode contribuir livremente na sua redação.
 
-The [French version](https://github.com/LINCnil/Guide-RGPD-du-developpeur) is the authentic version of this guide. An Italian version of this guide is also available [in pdf](https://github.com/LINCnil/GDPR-Developer-Guide/releases/tag/V1.0) and [for contributions](https://github.com/LINCnil/GDPR-Developer-Guide/tree/it).
+A [versão francesa](https://github.com/LINCnil/Guide-RGPD-du-developpeur) é a versão autêntica deste guia. Uma versão italiana deste guia está também disponível [em PDF](https://github.com/LINCnil/GDPR-Developer-Guide/releases/tag/V1.0) e [para contributos](https://github.com/LINCnil/GDPR-Developer-Guide/tree/it). Existe ainda uma versão portuguesa também disponível [para contributos](https://github.com/ozzie-eu/Guia-RGPD-Programador).
 
-#### Is this guide for developers only?
+#### Este guia é exclusivamente para programadores?
 
-This guide is mainly aimed at developers working alone or in teams, team leaders, service providers but also at anyone interested in web or application development.
+Este guia visa maioritáriamente programadores que trabalhem individualmente ou em equipa, chefes de equipa, prestadores de serviços, mas também todos os interessados em desenvolvimento web e de aplicações de software.
 
-It provides advice and best practices, and thus gives useful keys to understand the GDPR for every stakeholder, regardless of the size of their structure. It can also stimulate discussions and practices within the organisations and in customer relationships.
+São providenciados conselhos e melhores práticas, apresentando conceitos-chave úteis na compreensão do RGPD para todos os intervenientes, independentemente da dimensão da sua organização. Pode também servir para estimular discussões e práticas dentro das organizações e nas relações com os clientes.
 
-#### What does the guide contain?
+#### O que contém este guia?
 
-This guide is divided into **16 thematic sheets** which cover most of the needs of developers at each stage of their project, from the preparation of the development to the use of analytics.
+Este guia está dividido em **16 fichas temáticas** a maioria das necessidades dos programadores em cada etapa dos projetos, desde a preparação do desenvolvimento até à utilização de ferramentas analíticas.
 
-The General Data Protection Regulation (or GDPR) specifies that the protection of the rights and freedoms of natural persons requires that **"appropriate technical and organisational measures be taken to ensure that the requirements of this Regulation are met"** (Recital 78).
+O Regime Geral de Proteção de Dados (ou RGPD) especifica que a proteção dos direitos e liberdades de pessoas naturais requer **"a adoção de medidas técnicas e organizativas adequadas, a fim de assegurar o cumprimento dos requisitos do presente regulamento."** (Recital 78).
 
-The determination of these measures is necessarily **related to the context of the processing operations put in place**, and the controller (the public or private entity processing personal data) must therefore ensure the security of the data it is called upon to process.
+A determinação destas medidas está **relacionada com o contexto das atividades de tratamento postas em prática**, e o responsável do tratamento (a entidade pública ou provada que trata os dados pessoais) deve consequentemente assegurar a segurança dos dados que se propõe tratar.
 
-The good practices in this guide **are therefore not intended to cover all the requirements of the regulations nor to be prescriptive**, they provide a first level of measures to take into account privacy protection issues in IT developments that are intended to be applied to all data processing projects. Depending on the nature of the processing carried out in certain cases, additional measures will have to be implemented in order to fully comply with the regulations.
+As boas práticas neste guia **não pretendem cobrir a totalidade dos requisitos do regulamento nem ser prescritivo**, elas providenciam um primeiro nível de medidas para considerar questões de proteção de privacidade em desenvolvimentos de TI, com a intenção de serem aplicadas a todos os projetos de tratamento de dados. Dependendo da natureza do tratamento realizado, em certos casos, medidas adicionais terão de ser implementadas com vista a cumprir inteiramente com o regulamento.
 
-## Table of contents
+## Tabela de Conteúdos
 
-0. [Develop in compliance with the GDPR](#Sheet_n°0_:_Develop_in_compliance_with_the_GDPR)
+0. [Desenvolver em conformidade com o RGPD](00-Desenvolver-em-conformidade-com-o-RGPD.md)
 
-1. [Identify personal data](#Sheet_n°1_:_Identify_personal_data)
+1. [Identificar dados pessoais](#)
 
-2. [Prepare your development](#Sheet_n°2_:_Prepare_your_development)
+2. [Preparar o desenvolvimento](#)
 
-3. [Securing your development environment](#Sheet_n°3_:_Securing_your_development_environment)
+3. [Segurança do ambiente de desenvolvimento](#)
 
-4. [Manage your source code](#Sheet_n°4_:_Manage_your_source_code)
+4. [Gestão do código-fonte](#)
 
-5. [Make an informed choice of architecture](#Sheet_n°5_:_Make_an_informed_choice_of_architecture)
+5. [Escolha informada da arquitetura](#)
 
-6. [Securing your websites, applications and servers](#Sheet_n°6_:_Securing_your_websites,_applications_and_servers)
+6. [Aplicar segurança nos websites, aplicações e servidores](#)
 
-7. [Minimize data collection](#Sheet_n°7_:_Minimize_data_collection)
+7. [Minimização da recolha de dados](#)
 
-8. [Manage user profiles](#Sheet_n°8_:_Manage_users_profiles)
+8. [Gestão de perfis de utilizadores](#)
 
-9. [Control your libraries and SDKs](#Sheet_n°09_:_Control_your_libraries_and_SDKs)
+9. [Controlar bibliotecas e SDKs](#)
 
-10. [Ensure the quality of the code and its documentation](#Sheet_n°10_:_Ensure_quality_of_the_code_and_its_documentation)
+10. [Assegurar a qualidade do código e a sua documentação](#)
 
-11. [Test your applications](#Sheet_n°11_:_Test_your_applications)
+11. [Testes à aplicação](#)
 
-12. [Inform users](#Sheet_n°12_:_Inform_users)
+12. [Informar os utilizadores](#)
 
-13. [Prepare to exercise people's rights](#Sheet_n°13_:_Prepare_for_the_exercise_of_people_rights)
+13. [Preparar o exercício de direitos pelas pessoas](#)
 
-14. [Define a data retention period](#Sheet_n°14_:_Define_a_data_retention_period)
+14. [Definir um período de retenção de dados](#)
 
-15. [Take into account the legal basis in the technical implementation](#Sheet_n°15_:_Take_into_account_the_legal_bases_in_the_technical_implementation)
+15. [Considerar a base de licitude na implementação técnica](#)
 
-16. [Use analytics on your websites and applications](#Sheet_n°16:_Use_analytics_on_your_websites_and_applications)
-
-
-
-## How can I contribute to this guide?
-
-**This guide is available in two versions**:
-
-* A [web version on the CNIL website](http://www.cnil.fr/en/gdpr-developers-guide) and in the tab [the "Releases" tab](https://github.com/LINCnil/GDPR-Developer-Guide/releases) of this repository;
-* This [GitHub version](https://github.com/LINCnil/GDPR-Developer-Guide), which offers the possibility for everyone to contribute.
-
-**The contribution is done in a few steps**:
-
-* Register on Github;
-* Go to the project page;
-* You can:
-    * Use the "Issue" tab to open comments or participate in the discussion
-    * Use the "Fork" option to make your own modifications and propose their inclusion via the "Pull Requests" button.
-
-**Your contribution proposal will be examined by the CNIL before publication**. The web version of the GDPR developer's guide will be regularly updated.
-
-## Usage
+16. [Uso de mecanismos analíticos nos websites e aplicações](#)
 
 
-To release this repository yourself, you can use the **Pandoc** tool. This tool will allow you to convert the records into a docx file or an HTML document.
 
-You can find the instructions to install this tool [here]( https://pandoc.org/installing.html)
+## Como posso contribuir para este guia?
 
-* **To generate a .docx file**:
+**O guia original está disponível em 2 versões**:
+
+* Uma [versão web no sítio Internet da CNIL](http://www.cnil.fr/en/gdpr-developers-guide) e no repositório original [no separador "Releases"](https://github.com/LINCnil/GDPR-Developer-Guide/releases);
+* Esta [versão no GitHub](https://github.com/LINCnil/GDPR-Developer-Guide), que oferece a possibilidade a todos de contribuir.
+
+**O contributo pode ser feito em alguns passos**:
+
+* Criar um registo no Github;
+* Navegar até à página do projeto;
+* Pode:
+    * Utilizar o separador "Issue" para enviar comentários ou participar no debate.
+    * Utilizar a opção "Fork" para realizar as suas próprias modificações e propor a sua inclusão por via do botão "Pull Requests".
+
+**A sua proposta de contributo será examinada pela CNIL antes da publicação**. a versão Web do guia RGPD do programador será regularmente atualizada.
+
+## Utilização
+
+
+Para publicar este repositório de forma autónoma, pode recorrer à ferramenta **Pandoc**. Esta ferramenta permite converter os registos num ficheiro docx ou um documento HTML.
+
+Pode encontrar as instruções sobre como instalar [aqui]( https://pandoc.org/installing.html)
+
+* **Para gerar um ficheiro .docx**:
 
 ```bash
-pandoc -s --toc --toc-depth=1 -o GDPR_developer_guide.docx [0-9][0-9]*.md
+pandoc -s --toc --toc-depth=1 -o Guia-RGPD-Programador.docx [0-9][0-9]*.md
 ```
 
-* **To generate an .html file**:
+* **Para gerar um ficheiro .html**:
 
 ```bash
 pandoc -s --template="templates/mytemplate.html" -H templates/pandoc.css -o index.html README.md [0-9][0-9]*.md
