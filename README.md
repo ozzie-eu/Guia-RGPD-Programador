@@ -61,8 +61,6 @@ As boas práticas neste guia **não pretendem cobrir a totalidade dos requisitos
 
 16. [Uso de mecanismos analíticos nos websites e aplicações](16-Uso-de-mecanismos-analiticos-nos-websites-e-aplicacoes.md)
 
-
-
 ## Como posso contribuir para este guia?
 
 **O guia original está disponível em 2 versões**:
