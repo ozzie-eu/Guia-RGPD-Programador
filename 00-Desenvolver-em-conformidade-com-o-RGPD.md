@@ -16,4 +16,4 @@ Os próximos passos assistirão no desenvolvimento de aplicações ou sítios We
 
 6. **Documentação da conformidade nos desenvolvimentos** para provar a conformidade com o RGPD a todo o instante: as ações realizadas e os documentos produzidos a cada etapa do desenvolvimento devem ser dominadas. Em particular, isto implica uma revisão e atualização regular da documentação dos desenvolvimentos para que esteja permanentemente consistente com as funcionalidades disponibilizadas no programa.
 
-O sítrio Internet da CNIL providencia inúmeros ficheirros práticos que pode assistir na construção de tratamentos dentro da legislação de acordo com o sector de atividade.
+O sítrio Internet da CNIL providencia inúmeros ficheiros práticos que pode assistir na construção de tratamentos dentro da legislação de acordo com o sector de atividade.
