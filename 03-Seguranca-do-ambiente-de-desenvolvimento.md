@@ -1,25 +1,25 @@
-# Sheet n°3: Secure your development environment
+# Ficha n°3: Segurança do ambiente de desenvolvimento
 
-#### The security of production, development and continuous integration servers as well as developer workstations must be a priority because they centralize access to a large amount of data.
+#### A segurança dos servidores de produção, desenvolvimento e integração contínua, assim como dos postos de trabalho dos programadores, tem de ser prioritária porque centralizam o acesso a um grande volume de dados.
 
-## Assess your risks and adopt the appropriate security measures
+## Avaliar os riscos e adotar medidas de segurança apropriadas
 
-* **Assess the risks** in the tools and processes used for your developments. Make an inventory of your existing security measures and define an action plan to improve your risk coverage. Appoint a person responsible for its implementation.
+* **Avaliar os riscos** nas ferramentas e processos utilizados para os desenvolvimentos. Fazer um inventário das medidas de segurança existentes e definir um plano de ação para melora a mitigação dos riscos. NBomear uma pessoa responsável pela implementação do plano.
 
-* Consider the risks on all the tools you use, including risks related to SaaS (Software as a Service) and collaborative tools in the cloud (such as [Slack](https://slack.com), [Trello](https://trello.com), [GitHub](https://github.com), etc.).
+* Considerar os riscos em todas as ferramentas utilizadas, incluindo os riscoa associados a SaaS (Software as a Service) e ferramentas colaborativas na nuvem (tal como o [Slack](https://slack.com), [Trello](https://trello.com), [GitHub](https://github.com), etc.).
 
-## Secure your servers and workstations in a homogeneous and reproducible way
+## Tornar seguros os servidores e posto de trabalho de uma forma homogénea e reproduzível
 
-* Lists of **recommendations** concerning the security of servers, workstations and internal networks are available in the [sheets n° 5 to 8](https://www.cnil.fr/sites/default/files/atoms/files/cnil_guide_securite_personnelle_gb_web.pdf) of the **security of personal data guide** of the CNIL.
+* Listas de **recomendações** acerca da segurança de servidores, postos de trabalho e redes internas estão disponíveis nas [ficha n° 5 até 8](https://www.cnil.fr/sites/default/files/atoms/files/cnil_guide_securite_personnelle_gb_web.pdf) do **guia de segurança de dados pessoais** da CNIL.
 
-* Write a **document listing those measures and explaining their configuration** to ensure that security measures are implemented uniformly on servers and workstations. In order to reduce the workload, **configuration management tools**, such as [Ansible](https://github.com/ansible/ansible), [Puppet](https://github.com/puppetlabs/puppet) or [Chef](https://github.com/chef/chef), can be used.
+* Escrever um **documento com a lista de medidas e e explicação da sua configuração** para assegurar que as medidas de segurança são implementadas uniformemente nos servidores e postos de trabalho. PAra reduzir a carga de trabalho, **ferramentas de gestão da configuração**, tal como [Ansible](https://github.com/ansible/ansible), [Puppet](https://github.com/puppetlabs/puppet) or [Chef](https://github.com/chef/chef), podem ser usadas.
 
-* Update servers and workstations, if possible automatically. You can set up a watchlist of the most important vulnerabilities, for example the [NVD Data Feeds](https://nvd.nist.gov/vuln/data-feeds).
+* Atualizar servidores e postos de trabalho, se possivel de forma automática. Pod ser configurada uma monitorização sobre uma lista das vulnerabilidades mais importantes, por exemplo [NVD Data Feeds](https://nvd.nist.gov/vuln/data-feeds).
 
-## Put special emphasis on access management and traceability of operations
+## Colocar especial enfâse na gestão de acessos e rastreio de operações
 
-* Remember to document the management of your **SSH keys** (use of state of the art cryptography and key length algorithms, protection of private keys with a passphrase, key rotation). For examples of good practice, see [the document on the secure use of (open)SSH](https://www.ssi.gouv.fr/uploads/2014/01/NT_OpenSSH_en.pdf).
+* Lembrar de documentar a gestão das **chaves SSH** (uso de criptografia e algoritmos de comprimento de chave de última geração, proteção das chaves provadas com uma palavra-frase, rotaçaõ de chaves). Para exemplos de boas práticas, ver [o documento sobre o uso seguro de (open)SSH](https://www.ssi.gouv.fr/uploads/2014/01/NT_OpenSSH_en.pdf).
 
-* Encourage strong authentication on the services used by the development team.
+* Encorajar autenticação forte nos serviços utilizados pelas equipas de desenvolvimento.
 
-* **Trace** access to your machines and, if possible, implement **automated log analysis**. In order to keep reliable traces, the use of generic accounts is to be avoided.
+* **Rastreat** acessos às máquinas e, se possivel, implementar **análise automática de registos (logs)**. Para manter rastreios fidedignos, a utilização de contas genéricas é para ser evitado.
