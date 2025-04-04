@@ -1,37 +1,37 @@
-# Sheet n°4: Manage your source code
+# Folha n°4: Gestão do código-fonte
 
-#### Whatever the size of your project, it is highly recommended to use a source code management tool, such as a *version control system*,  to track its different versions over time.
+#### Independentemente do tamanho do seu projeto, é altamente recomendável usar uma ferramenta de gerenciamento de código-fonte, como um *sistema de controle de versão*, para rastrear suas diferentes versões ao longo do tempo.
 
-## Set up your version control system efficiently, thinking about its security.
+## Configure seu sistema de controle de versão de forma eficiente, pensando na sua segurança.
 
-* A version control system is a software program that allows you to store **all your source code and associated files**, while keeping the **chronology of all changes** that have been made. A simple FTP server is not a version control system.
+* Um sistema de controle de versão é um programa de software que permite armazenar **todo o seu código-fonte e arquivos associados**, mantendo a **cronologia de todas as alterações** realizadas. Um simples servidor FTP não é um sistema de controle de versão.
 
-* Set up your environment correctly using the features offered by your version control system. It is recommended that you implement strong **authentication** and/or **authentication with SSH keys** at the beginning of your project.
+* Configure seu ambiente corretamente usando os recursos oferecidos pelo sistema de controle de versão. Recomenda-se implementar uma **autenticação forte** e/ou **autenticação com chaves SSH** no início do seu projeto.
 
-* In addition, assign *levels of access* to your project to the users of your version control system and define for each level the corresponding **permissions** (for example, a "guest" level with limited read rights, a "developer" level with write rights, etc.).
+* Além disso, atribua *níveis de acesso* ao seu projeto para os usuários do sistema de controle de versão e defina para cada nível as **permissões** correspondentes (por exemplo, um nível "convidado" com direitos de leitura limitados, um nível "desenvolvedor" com direitos de escrita, etc.).
 
-* Make regular **backups** of your source code management system. In particular, remember to back up your main server where all changes are saved.
+* Faça **backups regulares** do seu sistema de gerenciamento de código-fonte. Em particular, lembre-se de fazer backup do servidor principal onde todas as alterações são salvas.
 
-* Set up development procedures to work efficiently even if **several people are developing at the same time**. For example, you may decide not to work on the same branch (_master_), but to set up feature-based branches, which will be merged into the main branch as development progresses. Such development strategies are already well documented, for example in [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/). In addition, some version control systems offer to set up **protected branches** that prevent unauthorized changes to the files in these branches.
+* Estabeleça procedimentos de desenvolvimento para trabalhar de forma eficiente, mesmo que **várias pessoas estejam desenvolvendo ao mesmo tempo**. Por exemplo, você pode decidir não trabalhar na mesma branch (_master_), mas configurar branches baseadas em funcionalidades, que serão mescladas na branch principal à medida que o desenvolvimento avança. Essas estratégias de desenvolvimento já estão bem documentadas, como no [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/). Além disso, alguns sistemas de controle de versão permitem configurar **branches protegidas** que impedem alterações não autorizadas nos arquivos dessas branches.
 
+## Esteja ciente do conteúdo do seu código-fonte.
 
-## Be aware of your source code content.
+* Implemente **ferramentas de métricas de qualidade de código** que escanearão seu código assim que ele for _commitado_ para verificar sua qualidade. Você também pode adicionar scripts para verificar essas métricas na [configuração do sistema de controle de versão](https://git-scm.com/book/uz/v2/Customizing-Git-Git-Hooks): o _commit_ será cancelado se o código-fonte não tiver qualidade suficiente.
 
-* Implement **code quality metrics tools** that will scan your code as soon as it is _committed_ to check its good quality. You can also add scripts to check these metrics in the [version control system configuration](https://git-scm.com/book/uz/v2/Customizing-Git-Git-Hooks): the _commit_ will be cancelled if the source code is not of sufficient quality.
+* Mantenha seus segredos e senhas fora do repositório de código-fonte:
+  * em **arquivos separados, que não foram _commitados_**. Lembre-se de usar arquivos especiais do seu sistema de controle de versão (como _.gitignore_ para _Git_) para evitar _commitar_ arquivos sensíveis por engano.
+  * em **variáveis de ambiente**, certificando-se de que as variáveis de ambiente não sejam acidentalmente gravadas em *logs* ou exibidas quando ocorrer um erro na aplicação.
+  * usando [**software específico de gerenciamento de segredos ou configurações**](https://www.digitalocean.com/community/tutorials/an-introduction-to-managing-secrets-safely-with-version-control-systems#using-configuration-management-systems-for-secret-management).  
 
-* Keep your secrets and passwords out of your source code repository:
-    * in separate **files, which have not been _committed_**. Remember to use special files from your version control system (such as _.gitignore_ for _Git_) so that you don't _commit_ sensitive files by mistake.
-    * in **environment variables**, take care to check that environment variables are not accidentally written to *logs* or displayed when an application error occurs.
-    * using [**specific secret or configuration management software**](https://www.digitalocean.com/community/tutorials/an-introduction-to-managing-secrets-safely-with-version-control-systems#using-configuration-management-systems-for-secret-management).  
+  Por fim, se você precisar incluir esses dados no repositório, considere **criptografar/descriptografar automaticamente** os arquivos usando um *plugin* do sistema de controle de versão (por exemplo, [_git-crypt_](https://github.com/AGWA/git-crypt)).
 
-  Finally, if you need to include such data in your repository, consider **automatically encrypting/decrypting** the files using a *plugin* from your version control system (e.g. [_git-crypt_](https://github.com/AGWA/git-crypt)).
+* Após um _commit_ que contenha dados pessoais ou outros dados críticos, não se esqueça de [purgar](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) [completamente](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository#purging-a-file-from-your-repositorys-history) o repositório de código-fonte: mesmo após a modificação, os dados ainda podem estar disponíveis no histórico do repositório.
 
-* After a _commit_ that contains personal or other critical data, don't forget to [purge](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) [completely](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository#purging-a-file-from-your-repositorys-history) the source code repository: even after modification, the data may still be available in your repository history.
+* Tenha cuidado antes de **publicar seu código-fonte online**. Revise **todo o conteúdo** para garantir que não haja dados pessoais, senhas ou outros segredos presentes, incluindo todo o histórico de alterações.
 
-* Be careful before **publishing your source code online**. Review **its entire contents** to make sure that no personal data, passwords or other secrets are present, including the entire change history.
+## Exemplos de ferramentas
 
-## Examples of tools
+* Diferentemente de ferramentas como [Subversion](https://subversion.apache.org/), que precisam de um servidor central para funcionar, os principais sistemas de controle de versão ([Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), por exemplo) são **descentralizados**.
 
-* Unlike tools such as [Subversion](https://subversion.apache.org/), which need a central server to run, the main version control systems ([Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/) for example) are **decentralized**.
+* Para a maioria dessas ferramentas, é fornecida uma **interface web e ferramentas relacionadas** (gerenciamento de bugs, wiki para sua documentação, etc.). Essas soluções podem ser acessíveis via internet ([GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/), etc.) ou integradas aos seus próprios servidores.urce code
 
-* For most of these tools, a **web interface and related tools** (bug management, wiki for your documentation, etc.) are provided. These solutions can either be accessible via the internet ([GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/), etc.), or they can be integrated into your own servers.
