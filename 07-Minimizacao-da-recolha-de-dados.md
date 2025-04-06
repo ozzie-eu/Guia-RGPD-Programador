@@ -1,29 +1,30 @@
-# Sheet n°7: Minimize data collection
+# Ficha n°7: Minimização da recolha de dados
 
-#### You shall only collect personal data that is adequate, relevant and necessary in relation to the purposes for which they are processed, as defined at the time of collection.
+#### Você deve coletar apenas os dados pessoais que sejam adequados, relevantes e necessários em relação aos propósitos para os quais são processados, conforme definido no momento da coleta.
 
-## Before collection, think about the different types of data you need to collect and try to limit your collection to what is strictly necessary.
+## Antes da coleta, pense nos diferentes tipos de dados que você precisa coletar e tente limitar sua coleta ao que é estritamente necessário.
 
-* Think about the different **types of data** that will need to be collected before an application is implemented and **document** this thinking.
+* Pense nos diferentes **tipos de dados** que precisarão ser coletados antes de implementar uma aplicação e **documente** esse raciocínio.
 
-* If specific data is not **needed for a certain category of people**, do not collect it.
+* Se dados específicos não forem **necessários para uma determinada categoria de pessoas**, não os colete.
 
-* Process and store data in a way that **reduces accuracy** (similar to pseudonymization). For example, store only the year of birth instead of a full date of birth if the application only needs the year.
+* Processe e armazene os dados de uma forma que **reduza a precisão** (semelhante à pseudonimização). Por exemplo, armazene apenas o ano de nascimento em vez de uma data de nascimento completa, se a aplicação precisar apenas do ano.
 
-* If collecting particularly sensitive data, such as health or criminal convictions data, be sure to collect only the **minimum required**. Due to the regulatory constraints, the simplest solution is still to **not collect them** if you can do without them.
+* Se estiver coletando dados particularmente sensíveis, como dados de saúde ou condenações criminais, certifique-se de coletar apenas o **mínimo necessário**. Devido às restrições regulatórias, a solução mais simples ainda é **não coletá-los** se puder prescindir deles.
 
-* Minimize the amount of data collected also in the **log data** and do not store sensitive or critical data (health data, passwords, etc.).
+* Minimize a quantidade de dados coletados também nos **dados de log** e não armazene dados sensíveis ou críticos (dados de saúde, senhas, etc.).
 
-* Some features may improve the user experience, but are **not strictly necessary for your application to work properly** (e.g. geolocation to simplify a geographic search). In this case, the end user must be able to **choose whether or not to use** this functionality. If he uses it, the data that you are led to collect for its operation must only be kept for the time strictly necessary for its operation and never be used for other purposes.
+* Algumas funcionalidades podem melhorar a experiência do usuário, mas **não são estritamente necessárias para o funcionamento adequado da sua aplicação** (por exemplo, geolocalização para simplificar uma busca geográfica). Nesse caso, o usuário final deve poder **escolher se deseja ou não usar** essa funcionalidade. Se ele a utilizar, os dados que você precisar coletar para seu funcionamento devem ser mantidos apenas pelo tempo estritamente necessário para sua operação e nunca usados para outros fins.
 
-* Remember to associate **retention periods** for each category of data, depending on the purpose of the processing and the legal or regulatory obligations relating to their retention. Logs must also have a retention period. Document the defined retention durations. You will need to be able to justify them.
+* Lembre-se de associar **períodos de retenção** para cada categoria de dados, dependendo do propósito do processamento e das obrigações legais ou regulatórias relacionadas à sua retenção. Logs também devem ter um período de retenção. Documente as durações de retenção definidas. Você precisará ser capaz de justificá-las.
 
-## Once the data has been collected, set up automatic deletion mechanisms.
+## Uma vez que os dados tenham sido coletados, configure mecanismos automáticos de exclusão.
 
-* Implement an automatic **purge** system at the end of the shelf life. You can also implement manual reviews of stored data on a periodic basis.
+* Implemente um sistema automático de **purga** ao final do período de vida útil. Você também pode realizar revisões manuais dos dados armazenados periodicamente.
 
-* To ensure complete erasure, erase **physically** all data that is no longer needed using specialized tools or by destroying the physical media.
+* Para garantir a exclusão completa, apague **fisicamente** todos os dados que não são mais necessários usando ferramentas especializadas ou destruindo os meios físicos.
 
-* If the data is still useful, you can reduce its sensitivity by using **pseudomisation** or even **anonymisation** methods. In case of pseudonymization, these data remain subject to the regulations on personal data (see [Sheet 1](#Sheet_n°1_:_Identify_personal_data)).
+* Se os dados ainda forem úteis, você pode reduzir sua sensibilidade usando métodos de **pseudonimização** ou até mesmo de **anonimização**. No caso de pseudonimização, esses dados continuam sujeitos às regulamentações sobre dados pessoais (veja [Ficha 1](#Ficha_n°1_:_Identificar_dados_pessoais)).
 
-* Log the **automatic deletion procedures**. The corresponding logs can be used as a **proof of deletion** of a data item.
+* Registre os **procedimentos de exclusão automática**. Os logs correspondentes podem ser usados como uma **prova de exclusão** de um item de dado. data collection
+

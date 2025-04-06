@@ -1,31 +1,31 @@
-# Sheet n°09: Control your libraries and SDKs
+# Ficha n°09: Controle suas bibliotecas e SDKs
+#### Você utiliza bibliotecas, SDKs ou outros componentes de software desenvolvidos por terceiros? Aqui estão algumas dicas sobre como integrar essas ferramentas mantendo o controle de seus desenvolvimentos.
 
-#### Do you use libraries, SDKs, or other software components written by third parties? Here are a few tips on how to integrate these tools while keeping control of your developments.
+## Faça uma escolha informada
 
-## Make an informed choice
+* **Avalie o valor de adicionar cada dependência.** Alguns blocos de software comumente usados são apenas algumas linhas de código. No entanto, cada elemento adicionado aumenta a superfície de ataque do seu sistema. No caso de uma única biblioteca oferecer várias funcionalidades, integre apenas as funcionalidades que você realmente precisa. Ao ativar o número mínimo de funcionalidades, você reduz o número de possíveis bugs que podem ocorrer.
 
-* **Assess the value of adding each dependency.** Some commonly used software bricks are only a few lines long. However, each added element is an increase in your system's attack surface. In the case where a single library offers several functionalities, integrate only the functionalities you actually need. By activating the minimum number of functionalities, you reduce the number of potential bugs that could occur.
+* **Escolha softwares, bibliotecas e SDKs mantidos:**
 
-* **Choose maintained software, libraries and SDKs:**
+    * Se você deseja usar software livre ou de código aberto, tente escolher projetos ou soluções com uma comunidade ativa, atualizações regulares e boa documentação.
 
-    * If you want to use free or open source software, try to choose projects or solutions with an active community, regular updates and good documentation.
+    * Se você usar outros tipos de soluções com suporte comercial, garanta contratualmente que o código será mantido e atualizado durante a vida útil do seu projeto.
 
-    * If you use other types of solutions with commercial support, contractually ensure that the code will be maintained and updated for the life of your project.
+* **Leve a privacidade em consideração.** Alguns SDKs ou bibliotecas se financiam utilizando dados pessoais coletados das aplicações ou sites nos quais estão integrados. Certifique-se de que esses terceiros cumpram as leis aplicáveis em relação aos dados pessoais, incluindo um mecanismo para obter o consentimento do usuário.
 
-* **Take privacy into account.** Some SDKs or libraries pay for themselves by using personal data collected from the applications or sites on which they are integrated. Make sure that such third parties comply with applicable laws regarding personal data, including a mechanism for obtaining user consent.
+* **Se você usar mecanismos criptográficos, é fortemente desencorajado implementar algoritmos ou protocolos criptográficos por conta própria**, mas sim tentar escolher bibliotecas criptográficas que sejam mantidas, reconhecidas e fáceis de usar.
 
-* **If you use cryptographic mechanisms, it is strongly discouraged to implement cryptographic algorithms or protocols yourself**, but rather try to choose cryptographic libraries that are maintained, recognized and easy to use.
+## Avalie os elementos selecionados
 
-## Evaluate the selected elements
+* **Leia a documentação e altere as configurações padrão.** É importante saber como suas dependências funcionam. Bibliotecas e SDKs de terceiros frequentemente vêm com arquivos de configuração padrão, que raramente são alterados por falta de tempo, o que causa muitas falhas de segurança.
+* **Audite suas bibliotecas e SDKs.** Você realmente sabe o que todas as bibliotecas e SDKs que você integra fazem? Quais dados são enviados por meio dessas dependências e para quem? Essa auditoria permitirá determinar as obrigações de proteção de dados a serem respeitadas e estabelecer a responsabilidade dos atores.
+* **Mapeie suas dependências.** Bibliotecas e SDKs de terceiros também podem integrar outros componentes: auditar seu código permitirá mapear melhor todas as suas dependências e agir melhor caso um problema afete uma delas. Também é recomendado realizar auditorias de segurança de seus componentes de terceiros e monitorá-los.
+* **Cuidado com [typosquatting](https://en.wikipedia.org/wiki/Typosquatting) e outras técnicas maliciosas.** Verifique os nomes das dependências, bem como suas próprias dependências, para evitar ataques. Não copie e cole linhas de comando de sites desconhecidos.
 
-* **Read the documentation and change the default configurations**. It is important to know how your dependencies work. Third party libraries and SDKs often come with default configuration files, which are rarely changed due to lack of time, which causes many security holes.
-* **Audit your libraries and SDKs.** Do you really know what all the libraries and SDKs you integrate do? What data is sent through these dependencies and to whom? This audit will allow you to determine the data protection obligations to be respected and to establish the responsibility of the actors.
-* **Map your dependencies.** Third-party libraries and SDKs can also integrate other components: auditing their code will allow you to better map all your dependencies and to better act if a problem affects one of them. It is also recommended that you perform security audits of your third-party components and monitor them.
-* **Beware of [typosquatting](https://en.wikipedia.org/wiki/Typosquatting) and other malicious techniques.** Check the names of dependencies, as well as their own dependencies to avoid attacks. Do not copy and paste command lines from unknown sites.
+## Mantenha bibliotecas e SDKs
 
-## Maintain libraries and SDKs
+* **Use sistemas de gerenciamento de dependências** (como yum, apt, maven, pip, etc.) para manter uma lista atualizada de suas dependências.
+* **Gerencie as atualizações de suas dependências,** especialmente no caso de atualizações de segurança que corrigem vulnerabilidades. Você deve configurar um procedimento documentado para gerenciá-las e implantá-las o mais rápido possível.
+* **Esteja ciente das versões de bibliotecas e SDKs que estão no fim do suporte** e que não serão mais mantidas: tente encontrar outra solução (escolha uma nova biblioteca, renove o suporte comercial).
+* **Verifique o status de projetos de código aberto,** especialmente a mudança de domínio ou propriedade de pacotes, pois alguns ataques utilizam atualizações maliciosas de dependências populares.
 
-* **Use dependency management systems** (such as yum, apt, maven, pip, etc.) to maintain an up-to-date list of your dependencies.
-* **Manage updates to your dependencies,** especially in the case of security updates that fix vulnerabilities. You must set up a documented procedure to manage and deploy them as soon as possible.
-* **Be aware of the versions of libraries and SDKs at the end of support** that will no longer be maintained: try to find another solution (choose a new library, renew commercial support).
-* **Check the status of open-source projects,** especially the change of domain or package ownership, some attacks using malicious updates of popular dependencies.

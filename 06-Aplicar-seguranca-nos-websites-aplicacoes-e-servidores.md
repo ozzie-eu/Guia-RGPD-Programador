@@ -1,57 +1,58 @@
-# Sheet n°6: Secure your websites, applications and servers
+# Ficha n°6: Aplicar segurança nos websites, aplicações e servidores
 
-#### Any website, application or server must incorporate basic state-of-the-art security rules, not only on network communications but also on authentication and infrastructure.
+#### Qualquer website, aplicação ou servidor deve incorporar regras básicas de segurança de última geração, não apenas nas comunicações de rede, mas também na autenticação e na infraestrutura.
 
-## Securing communication networks
+## Protegendo redes de comunicação
 
-* **Implement TLS version 1.2 or 1.3** (replacing SSL) on all websites and for data transmissions of your mobile applications, for example with [LetsEncrypt](https://letsencrypt.org/fr/), using only the most recent versions and checking its correct implementation.
+* **Implemente TLS versão 1.2 ou 1.3** (substituindo o SSL) em todos os websites e para transmissões de dados de suas aplicações móveis, por exemplo, com [LetsEncrypt](https://letsencrypt.org/fr/), utilizando apenas as versões mais recentes e verificando sua correta implementação.
 
-* **Make the use of TLS mandatory** for all pages of your site and for your mobile applications.
+* **Torne obrigatório o uso de TLS** para todas as páginas do seu site e para suas aplicações móveis.
 
-* **Limit the communication ports** strictly necessary for the proper functioning of the installed applications. If access to a web server is only possible using the HTTPS protocol, only ports 443 and 80 of this server must be accessible, all other ports can be blocked by the firewall.
+* **Limite as portas de comunicação** estritamente necessárias para o funcionamento adequado das aplicações instaladas. Se o acesso a um servidor web for possível apenas usando o protocolo HTTPS, somente as portas 443 e 80 desse servidor devem estar acessíveis; todas as outras portas podem ser bloqueadas pelo firewall.
 
-* **The OWASP has published on its website some cheatsheets** for exemple to [correctly implement TLS](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) or to [secure a webservice](https://cheatsheetseries.owasp.org/cheatsheets/Web_Service_Security_Cheat_Sheet.html).
+* **A OWASP publicou em seu site algumas cheatsheets** para, por exemplo, [implementar corretamente o TLS](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html) ou para [proteger um webservice](https://cheatsheetseries.owasp.org/cheatsheets/Web_Service_Security_Cheat_Sheet.html).
 
-## Securing Authentications
+## Protegendo autenticações
 
-* **Follow [the CNIL recommendation on passwords](https://www.cnil.fr/fr/node/23803)**. In particular, remember to limit the number of access attempts.
+* **Siga [a recomendação da CNIL sobre senhas](https://www.cnil.fr/fr/node/23803)**. Em particular, lembre-se de limitar o número de tentativas de acesso.
 
-* **Never store passwords in clear text**. Store them as a hash using a proven library, such as [bcrypt](https://en.wikipedia.org/wiki/Bcrypt).
+* **Nunca armazene senhas em texto claro**. Armazene-as como um hash usando uma biblioteca comprovada, como [bcrypt](https://en.wikipedia.org/wiki/Bcrypt).
 
-* **If cookies are used for authentication**, it is recommended:
+* **Se cookies forem usados para autenticação**, recomenda-se:
 
-    * to force the use of HTTPS via [HSTS](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security);
+    * forçar o uso de HTTPS via [HSTS](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security);
 
-    * to use the `secure` flag;
+    * usar o atributo `secure`;
 
-    * use the `HttpOnly` flag.
+    * usar o atributo `HttpOnly`.
 
-* **Test the cryptographic suites installed on the systems** and disable obsolete ones (RC4, MD4, MD5 etc.). Encourage the use of AES256. [Read the OSWAP note on the subject](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html).
+* **Teste as suítes criptográficas instaladas nos sistemas** e desative as obsoletas (RC4, MD4, MD5, etc.). Incentive o uso de AES256. [Leia a nota da OWASP sobre o assunto](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html).
 
-* **Adopt a specific password policy for administrators**. Change the passwords, at least, each time an administrator leaves and in case of suspected breach. Encourage strong authentication when possible.
+* **Adote uma política de senhas específica para administradores**. Altere as senhas, pelo menos, sempre que um administrador sair e em caso de suspeita de violação. Incentive a autenticação forte sempre que possível.
 
-* **Limit access to administration tools and interfaces to qualified staff.** Encourage the use of lower-privilege accounts for day-to-day operations.
+* **Limite o acesso às ferramentas e interfaces de administração ao pessoal qualificado.** Incentive o uso de contas com privilégios reduzidos para operações do dia a dia.
 
-* **Remote access to administration interfaces should be subject to increased security measures.** For example, for internal servers, implementing a VPN with strong authentication of the user and the workstation he or she is using may be a good solution.
+* **O acesso remoto às interfaces de administração deve estar sujeito a medidas de segurança reforçadas.** Por exemplo, para servidores internos, implementar uma VPN com autenticação forte do usuário e do dispositivo que ele está utilizando pode ser uma boa solução.
 
-## Securing infrastructures
+## Protegendo infraestruturas
 
-* **Make backups, if possible encrypted and checked regularly**. This is especially useful in case of a ransomware attack on your systems as having backups for all your systems will be the only measure that will allow you to restore your systems.
+* **Faça backups, se possível criptografados e verificados regularmente**. Isso é especialmente útil em caso de um ataque de ransomware aos seus sistemas, pois ter backups de todos os seus sistemas será a única medida que permitirá restaurá-los.
 
-* **Limit the size of the software stack used,** and for each element of the stack:
+* **Limite o tamanho da pilha de software utilizada** e, para cada elemento da pilha:
 
-    * **Install critical updates** without delay by scheduling an automatic weekly check;
-    * **Automate a vulnerability watch** by subscribing to the [NVD Data Feeds](https://nvd.nist.gov/vuln/data-feeds) for example.
+    * **Instale atualizações críticas** sem demora, agendando uma verificação automática semanal;
+    * **Automatize uma vigilância de vulnerabilidades** assinando os [NVD Data Feeds](https://nvd.nist.gov/vuln/data-feeds), por exemplo.
 
-* **Use vulnerability detection tools** for the most critical processes to detect possible security breach. Systems for detecting and preventing attacks on critical systems or servers can also be used. These tests must be conducted regularly and before any new software version is put into production.
+* **Use ferramentas de detecção de vulnerabilidades** para os processos mais críticos, a fim de detectar possíveis falhas de segurança. Sistemas de detecção e prevenção de ataques em sistemas ou servidores críticos também podem ser utilizados. Esses testes devem ser realizados regularmente e antes de qualquer nova versão de software ser colocada em produção.
 
-* **Restrict or fordbid physical and software access to diagnostic and remote configuration ports.** For example, you can list all open ports using the *netstat* tool.
+* **Restrinja ou proíba o acesso físico e de software às portas de diagnóstico e configuração remota.** Por exemplo, você pode listar todas as portas abertas usando a ferramenta *netstat*.
 
-* **Protect the databases you make available on the Internet**, at least by restricting access as much as possible (for example, by IP filtering) and by changing the default password for the administrator account.
+* **Proteja os bancos de dados que você disponibiliza na Internet**, pelo menos restringindo o acesso o máximo possível (por exemplo, por meio de filtragem de IP) e alterando a senha padrão da conta de administrador.
 
-* In terms of database management, good practices include:
+* Em termos de gerenciamento de bancos de dados, as boas práticas incluem:
 
-    * **using nominative accounts** for database access and create specific accounts for each application;
-    * **revoking the administrative privileges** of user or application accounts to avoid modification to database structure (table, vues, process, etc);
-    * having protection against SQL or script injection attacks;
-    * encouraging at rest disk and database encryption.
+    * **usar contas nominais** para acesso ao banco de dados e criar contas específicas para cada aplicação;
+    * **revogar os privilégios administrativos** de contas de usuários ou aplicações para evitar modificações na estrutura do banco de dados (tabelas, visões, processos, etc.);
+    * ter proteção contra ataques de injeção de SQL ou scripts;
+    * incentivar a criptografia de disco e banco de dados em repouso.bsites, applications and servers
+
