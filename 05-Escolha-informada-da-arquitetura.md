@@ -1,27 +1,27 @@
-# Sheet n°5: Make an informed choice of architecture
+# Ficha n°5: Escolha informada da arquitetura
 
-#### When designing the architecture of your application, you must identify personal data that will be collected and define a path and life cycle for each of them. The choice of supporting assets (local storage, server, cloud service) is a crucial step, which must be adapted to your needs, but also to your technical knowledge. The registry and conduction a privacy impact assesment can assist you in this choice.
+#### Ao projetar a arquitetura da sua aplicação, você deve identificar os dados pessoais que serão coletados e definir um caminho e ciclo de vida para cada um deles. A escolha dos ativos de suporte (armazenamento local, servidor, serviço em nuvem) é uma etapa crucial, que deve ser adaptada às suas necessidades, mas também ao seu conhecimento técnico. O registro e a condução de uma avaliação de impacto sobre a privacidade podem auxiliá-lo nessa escolha.
 
-## Examining life cycle of data and processes, from collection to erasure
+## Examinando o ciclo de vida dos dados e processos, desde a coleta até a exclusão
 
-* Represent and describe how the product generally works before starting your project, with a diagram of data flows and a detailed description of the processes carried out.
+* Represente e descreva como o produto funciona de forma geral antes de iniciar seu projeto, com um diagrama de fluxos de dados e uma descrição detalhada dos processos realizados.
 
-* When data is only **stored on the user's terminal** (local storage) or remains **confined on communication networks under the control of the user** (e.g. Wi-Fi or other local network), the main point of attention is data security. The duration for which data is stored and the actual deletion should be determined by the individuals.
+* Quando os dados são apenas **armazenados no terminal do usuário** (armazenamento local) ou permanecem **confinados em redes de comunicação sob o controle do usuário** (por exemplo, Wi-Fi ou outra rede local), o principal ponto de atenção é a segurança dos dados. A duração do armazenamento e a exclusão efetiva devem ser determinadas pelos indivíduos.
 
-* **When the data transits through online services**, the choice of hosting the data yourself or using a service provider must be made according to your security knowledge and the expected quality of service. Recognized cloud offerings may offer higher levels of security. However, they generate new risks that need to be mastered. [Recommendations for companies planning to use Cloud computing services](https://www.cnil.fr/sites/default/files/typo/document/Recommendations_for_companies_planning_to_use_Cloud_computing_services.pdf) can guide at this selection stage.
+* **Quando os dados transitam por serviços online**, a escolha de hospedar os dados você mesmo ou usar um provedor de serviços deve ser feita de acordo com seu conhecimento de segurança e a qualidade de serviço esperada. Ofertas reconhecidas de nuvem podem oferecer níveis mais altos de segurança. No entanto, elas geram novos riscos que precisam ser dominados. [Recomendações para empresas que planejam usar serviços de computação em nuvem](https://www.cnil.fr/sites/default/files/typo/document/Recommendations_for_companies_planning_to_use_Cloud_computing_services.pdf) podem orientar nesta etapa de seleção.
 
+## Em caso de uso de hospedagem externa
 
-## In case of use of external hosting
+* **Escolha um provedor de serviços que garanta medidas adequadas de segurança e confidencialidade e seja suficientemente transparente**.
 
-* **Choose a service provider that ensures appropriate security and confidentiality measures and is sufficiently transparent**. 
+* **Certifique-se de conhecer a localização geográfica dos servidores que hospedarão seus dados**. Pode ser necessário transferir dados para fora da União Europeia (UE) e do Espaço Econômico Europeu (EEE). Embora os dados possam circular livremente dentro da UE/EEE, transferências para fora da UE/EEE são possíveis, desde que seja garantido um nível suficiente e apropriado de proteção de dados. A CNIL fornece um mapa no site mostrando os [diferentes níveis de proteção de dados nos países ao redor do mundo](https://www.cnil.fr/en/data-protection-around-the-world).
 
-* **Make sure you know the geographical location of the servers that will host your data**. You may be required to transfer data outside the European Union (EU) and the European Economic Area (EEA). While data can move freely within the EU/EEA, transfers outside the EU/EEA are possible, provided that sufficient and appropriate level of data protection is ensured. The CNIL provides an on-site map showing the [different levels of data protection in countries around the world](https://www.cnil.fr/en/data-protection-around-the-world).
+* **Se você precisar hospedar dados de saúde**, certifique-se de que o provedor utilizado seja [certificado](https://esante.gouv.fr/labels-certifications/hds/liste-des-herbergeurs-certifies) ou [aprovado](https://esante.gouv.fr/labels-certifications/hds/liste-des-herbergeurs-agrees) para essa atividade.
 
-* **If you need to host health data**, make sure that provider used is [certified](https://esante.gouv.fr/labels-certifications/hds/liste-des-herbergeurs-certifies) or [approved](https://esante.gouv.fr/labels-certifications/hds/liste-des-herbergeurs-agrees) for this activity.
+* Outros pontos a serem observados incluem:
+    - a existência de uma política de segurança acessível;
+    - medidas de segurança física e proteção no local de hospedagem;
+    - criptografia de dados e outros processos para garantir que o provedor não tenha acesso aos dados confiados a ele;
+    - a gestão de atualizações, a gestão de autorizações, a autenticação de pessoal e a segurança dos desenvolvimentos de aplicações;
+    - a fácil reversibilidade/portabilidade dos dados em um formato estruturado e comumente usado, mediante solicitação e a qualquer momento. an informed choice of architecture
 
-* Other points to be aware of include:
-    - the existence of an accessible security policy;
-    - physical security and safety measures at the hosting site;
-    - data encryption and other processes to ensure that the provider does not have access to the data entrusted to it;
-    - the management of updates, the management of authorizations, the authentication of personnel and the security of application developments;
-    - the easy reversibility/portability of data in a structured and commonly used format, on request and at any time.
